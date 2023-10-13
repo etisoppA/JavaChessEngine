@@ -107,7 +107,7 @@ public abstract class Move {
 
         @Override
         public String toString() {
-            return movedPiece.getPieceType() + BoardUtils.INSTANCE.getPositionAtCoordinate(this.destinationCoordinate);
+            return movedPiece.getPieceType() + BoardUtils.getPositionAtCoordinate(this.destinationCoordinate);
         }
     }
 
@@ -124,7 +124,7 @@ public abstract class Move {
 
         @Override
         public String toString() {
-            return movedPiece.getPieceType().toString() + BoardUtils.INSTANCE.getPositionAtCoordinate(this.destinationCoordinate);
+            return movedPiece.getPieceType().toString() + BoardUtils.getPositionAtCoordinate(this.destinationCoordinate);
         }
     }
 
@@ -178,7 +178,7 @@ public abstract class Move {
 
         @Override
         public String toString() {
-            return BoardUtils.INSTANCE.getPositionAtCoordinate(this.destinationCoordinate);
+            return BoardUtils.getPositionAtCoordinate(this.destinationCoordinate);
         }
     }
 
@@ -196,8 +196,8 @@ public abstract class Move {
 
         @Override
         public String toString() {
-            return BoardUtils.INSTANCE.getPositionAtCoordinate(this.movedPiece.getPiecePosition()).substring(0, 1) + "x" +
-                    BoardUtils.INSTANCE.getPositionAtCoordinate(this.destinationCoordinate);
+            return BoardUtils.getPositionAtCoordinate(this.movedPiece.getPiecePosition()).substring(0, 1) + "x" +
+                    BoardUtils.getPositionAtCoordinate(this.destinationCoordinate);
         }
     }
 
@@ -312,7 +312,7 @@ public abstract class Move {
 
         @Override
         public String toString() {
-            return BoardUtils.INSTANCE.getPositionAtCoordinate(this.destinationCoordinate);
+            return BoardUtils.getPositionAtCoordinate(this.destinationCoordinate);
         }
     }
 

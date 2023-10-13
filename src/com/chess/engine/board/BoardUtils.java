@@ -2,19 +2,18 @@ package com.chess.engine.board;
 
 import java.util.*;
 
-public enum BoardUtils {
+public class BoardUtils {
 
-    INSTANCE;
+
     public static final boolean[] FIRST_COLUMN = initColumn(0);
     public static final boolean[] SECOND_COLUMN = initColumn(1);
     public static final boolean[] SEVENTH_COLUMN = initColumn(6);
     public static final boolean[] EIGHTH_COLUMN = initColumn(7);
-
     public static final boolean[] FIRST_ROW = initRow(0);
     public static final boolean[] SECOND_ROW = initRow(8);
     public static final boolean[] SEVENTH_ROW = initRow(48);
     public static final boolean[] EIGHTH_ROW = initRow(56);
-    public final List<String> ALGEBRAIC_NOTATION = initializeAlgebraicNotation();
+    public static final List<String> ALGEBRAIC_NOTATION = initializeAlgebraicNotation();
     public final Map<String, Integer> POSITION_TO_COORDINATE = initializePositionToCoordinateMap();
     public static final int START_TILE_INDEX = 0;
     public static final int NUM_TILES = 64;
@@ -70,7 +69,7 @@ public enum BoardUtils {
         return POSITION_TO_COORDINATE.get(position);
     }
 
-    public String getPositionAtCoordinate(final int coordinate) {
+    public static String getPositionAtCoordinate(final int coordinate) {
         return ALGEBRAIC_NOTATION.get(coordinate);
     }
 
